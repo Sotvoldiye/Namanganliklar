@@ -164,6 +164,15 @@ main{
   padding: 40px 221px;
   color:#fff;
 }
+
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  padding-left: 221px;
+  padding-right: 221px;
+  justify-content: center;
+}
+
 .footer-top {
   display: grid;
   grid-template-columns:1fr 1fr 1fr;
@@ -177,6 +186,8 @@ main{
   line-height: 28.44px;
   margin-bottom: 15px;
   color:#fff;
+  justify-content: left;
+  text-align: left;
 }
 
 .footer__text {
