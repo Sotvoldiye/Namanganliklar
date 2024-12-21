@@ -1,0 +1,144 @@
+@import "../../css/global.css";
+
+.main {
+}
+.main__top__container {
+  display: flex;
+  gap: 10px;
+}
+
+.main__top__container__left {
+  display: flex;
+  flex-direction: column;
+}
+.left__title__logo {
+  align-items: center;
+  display: flex;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15.59px;
+  color:#5e5f61;
+  margin-bottom: 30px;
+}
+.left__title__text {
+font-weight: 500;
+font-size: 26px;
+line-height: 36px;
+margin-bottom: 20px;
+}
+.left__image img{
+  border-radius: 13px;
+  margin-bottom: 25px;
+}
+.left__text {
+}
+.tetx__item {
+  font-weight: 400;
+  font-size: 20px;
+  line-height:30px;
+  margin-bottom: 24px;
+}
+
+.divider1{
+  margin-top: 25px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #D2D2D2;
+  
+}
+
+.main__news__list {
+  background-color:#f6f6f6;
+  border-radius: 15px;
+  padding: 20px 17px 25px 17px;
+  margin-bottom: 10px;
+}
+.main__news__about__item {
+}
+.about__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height:28.44px;
+  color:#000000;
+  margin-bottom: 25px;
+}
+.about__text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height:24px;
+  margin-bottom: 8px;
+}
+.about__logo {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15.41px;
+  color:#5e5f61;
+ 
+}
+.main__news__about__image {
+  width: 393px;
+  height: 338px;
+  border-radius:10px;
+}
+
+.divider{
+  border-bottom: 0.5px solid #d2d2d2;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+.main__bottom__container {
+
+}
+.container {
+}
+.main__bottom__container__title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28.44px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+.main__bottom__container__items {
+  display: flex;
+  gap: 10px;
+}
+.main__bottom__container__item {
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  padding: 20px 30px 15px 17px;
+  margin-bottom: 100px;
+}
+.item_title1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  width: 338px;
+}
+.item_text1 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height:22px;
+  color: #4a4b4c;
+  margin-top: 10px;
+  width: 354px;
+}
+.item_image {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.item_image img{
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.item_image p{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.22px;
+  color: #5e5f61;
+}

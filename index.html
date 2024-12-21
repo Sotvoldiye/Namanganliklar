@@ -5,40 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAMANGANLIKLAR 24</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <!-- Header qismi -->
-    <header>
-        <div class="header__container  header-container">
-            <a href="./index.html">
-                <img class="header__container__logo" src="../image/NAMANGANLIKLAR 24.png" alt="" width="276" height="45"></a>
-            <p class="header__container__number"><span class="bold">$</span> 101370.2</p>
-            <p class="header__container__number number"><span class="bold">P</span> 138.26</p>
-            <form action="">
-                <input type="search" class="header__container__serach-type" placeholder="Поиск">
-            </form>
-            <div class="header__container__translate">
-                <p class="translate__language translate-active">УЗ</p>
-                <p class="translate__language">РУ</p>
-            </div>
-            <a href="./index.html" class="header__container__button">Войти</a>
+    <div class="modal hidden" id="modal">
+        <div class="modal-header" id="close-btn">
+            <h3></h3>
+            <button class="btn close-btn" id="close-btn">
+                <i class="fas fa-close">
+                </i>
+             </button>
+             </div>
+        <div class="modal-body">
+          
+          <p>
+            Хотите быть в курсе свежих новостей?  Включите уведомления!
+          </p>
+          <div class="modal-button" id="modal-button">Включит </div>
         </div>
-        <nav class="header-nav main-container">
-            <ul class="header-nav-item">
-                <li class="nav__item__link"><a href="./index.html">Главное</a></li>
-                <li class="nav__item__link"><a href="./pages/Интересное.html">Интересное</a></li>
-                <li class="nav__item__link"><a href="#">Экономика</a></li>
-                <li class="nav__item__link"><a href="#">Политика</a></li>
-                <li class="nav__item__link"><a href="#">Общество</a></li>
-                <li class="nav__item__link"><a href="#">Технологии</a></li>
-                <li class="nav__item__link"><a href="#">Спорт</a></li>
-                <li class="nav__item__link"><a href="#">Культура</a></li>
-                <li class="nav__item__link"><a href="#">Происшествия</a></li>
-                <li class="nav__item__link"><a href="#">Наука</a></li>
+      </div>
+    <div class="overlay hidden" id="overlay"></div>
+    <!-- Header qismi -->
+    <header class="header">
+       <div class=" header__top">
+        <div class="header__top__container container">        
+            <a class="site-logo" href="./index.html">
+                <img class="site-logo__image" src="../image/NAMANGANLIKLAR 24.png" alt="" width="276" height="45">
+            </a>
+            <div class="currency">
+                <div class="currency__item">
+                    <span class="currensy__logo">$</span>
+                    <span class="currensy__text">101370.2</span>
+                </div>
+                <div class="currency__item">
+                    <span class="currensy__logo">P</span>
+                    <span class="currensy__text">138.26</span>
+                </div>
+            </div>
+
+            <form class="global-search-form" action="">
+                <input type="search" class="global-search-form__input" placeholder="Поиск">
+            </form>
+
+            <div class="language-toggler">
+                <a class="language-toggler__item language-toggler__item__active" href="#">УЗ</a>
+                <a class="language-toggler__item language-toggler__item" href="#">РУ</a>
+            </div>
+
+
+            <a class="header__top__btn btn" href="./pages/contantus/contact.html">Войти</a>
+        </div>
+       </div>
+
+       <div class="header__nav">
+        <nav class="header__nav__container container">
+            <ul class="header__nav__list">
+                <li class="nav__item__item">
+                    <a class="sitenav__nav__link" href="./index.html">Главное</a>
+                </li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="./pages/Интересное/Интересное.html">Интересное</a></li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="#">Экономика</a></li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="#">Политика</a></li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="#">Общество</a></li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="#">Технологии</a></li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="#">Спорт</a></li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="#">Культура</a></li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="#">Происшествия</a></li>
+                <li class="nav__item__item"><a class="sitenav__nav__link" href="#">Наука</a></li>
             </ul>
         </nav>
-        <div class=" header__banner main-container">
-        <img class="" src="./image/homebanner.png" alt="">
+        </div>
+
+        <div class="header__banner">
+        <div class=" header__banner__container container">
+            <a class="header__banner__link" href="#">
+        <img class="header__banner__image" src="./image/homebanner.png" width="1200px" alt="">
+            </a>
+    </div>
         </div>
     </header>
     <main class="container">
@@ -137,7 +180,7 @@
         <p class="main__flex__text">
             Хотите быть в курсе свежих новостей?  Включите уведомления!
         </p>
-        <a class="main__flex__link" href="#">Включит </a>
+        <p class="main__flex__link" id="show-btn" >Включит </p>
     </section>
     <section class="main__news main-container1">
         <p class="main__news__title">
@@ -205,7 +248,7 @@
            </div>
         </div>
         </div>
-        <a class="main__news__button" href="#">Показать ещё </a>
+        <a class="main__news__button" href="./pages/Интересное/Интересное.html">Показать ещё </a>
         </div>
         <div class="main__news__about">
         <div class="main__news__list">
@@ -254,42 +297,107 @@
         </div>
     </section>
     </main>
-    <footer class="footer footer-container">
-        <p class="footer__title">
-            NAMANGANLIKLAR 24
-           </p>
-        <div class="footer-top">
-            
-          <div class="footer__description">
-           <p class="footer__text">
-            Воспроизводство, копирование, использование информации с сайта «NAMANGANLIKLAR24.UZ» возможно только с предварительного письменного разрешения редакции.
-           </p>
-           </div>
-           <ul class="footer__list">
-            <li class="footer__link">Информация о сайте</li>
-            <li class="footer__link">Напишите нам</li>
-            <li class="footer__link">Реклама</li>
-            <li class="footer__link">Прислать новость</li>
-           </ul>
-           <ul class="footer__list">
-            <li class="footer__link">Использование материалов</li>
-            <li class="footer__link">Темы дня</li>
-            <li class="footer__link">Наша команда
-            </li>
-           </ul>
-        </div>
-        <div class="divider"></div>
-        <div class="footer__bottom">
-            <p class="footer__bottom__title">
-                Наши <br> социальные сети
-            </p>
-            <div class="footer__bottom__image">
-              <img src="./image/free-icon-facebook-1384053 1.png" alt="">
-              <img src="./image/free-icon-instagram-2111463 1.png" alt="">  
-              <img src="./image/free-icon-telegram-2111646 1.png" alt="">
-              <img src="./image/free-icon-youtube-1384060 1.png" alt="">
+    <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__nav">
+            <div class="footer__nav__left">
+              <a class="footer__nav__link" href="#">
+                <img
+                  class="footer__nav__link__img"
+                  src="./pages/Интересное/image/logo.png"
+                  alt=" logo"
+                />
+              </a>
+              <address class="footer__nav__address">
+                Воспроизводство, копирование, использование информации с сайта
+                «NAMANGANLIKLAR24.UZ» возможно только с предварительного
+                письменного разрешения редакции.
+              </address>
             </div>
+            <div class="footer__nav__knew">
+              <ul class="footer__nav__knew__list">
+                <li class="footer__nav__knew__item">
+                  <a class="footer__nav__knew__link" href="#"
+                    >Информация о сайте</a
+                  >
+                </li>
+                <li class="footer__nav__knew__item">
+                  <a class="footer__nav__knew__link" href="#">Напишите нам</a>
+                </li>
+                <li class="footer__nav__knew__item">
+                  <a class="footer__nav__knew__link" href="#">Реклама</a>
+                </li>
+                <li class="footer__nav__knew__item">
+                  <a class="footer__nav__knew__link" href="#">Прислать новость</a>
+                </li>
+              </ul>
+              <ul class="footer__nav__knew__list">
+                <li class="footer__nav__knew__item">
+                  <a class="footer__nav__knew__link" href="#"
+                    >Использование материалов</a
+                  >
+                </li>
+                <li class="footer__nav__knew__item">
+                  <a class="footer__nav__knew__link" href="#">Темы дня</a>
+                </li>
+                <li class="footer__nav__knew__item">
+                  <a class="footer__nav__knew__link" href="#">Наша команда</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__bottom__left">
+              <h2 class="footer__bottom__left__title">Наши социальные сети</h2>
+            </div>
+            <div class="footer__bottom__knew">
+              <ul class="footer__bottom__knew">
+                <li class="footer__bottom__item">
+                  <a href="#" class="footer__bottom__link"
+                    ><img
+                      class="footer__bottom__knew"
+                      src="./image/free-icon-facebook-1384053 1.png"
+                      alt="Facebook"
+                      width="25"
+                      height="25"
+                  /></a>
+                </li>
+                <li class="footer__bottom__item">
+                  <a href="" class="footer__bottom__link"
+                    ><img
+                      class="footer__bottom__knew"
+                      src="./image/free-icon-instagram-2111463 1.png"
+                      alt="instagram"
+                      width="25"
+                      height="25"
+                  /></a>
+                </li>
+                <li class="footer__bottom__item">
+                  <a href="" class="footer__bottom__link"
+                    ><img
+                      class="footer__bottom__knew"
+                      src="./image/free-icon-telegram-2111646 1.png"                      alt="telegram"
+                      width="25"
+                      height="25"
+                  /></a>
+                </li>
+                <li class="footer__bottom__item">
+                  <a href="" class="footer__bottom__link"
+                    ><img
+                      class="footer__bottom__knew"
+                      src="./image/free-icon-youtube-1384060 1.png"
+                      alt="youtube"
+                      width="25"
+                      height="25"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
+
+      <script src="./script.js"></script>
 </body>
 </html>
